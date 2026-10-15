@@ -1,17 +1,15 @@
 
 #include <seng.h>
 
-class App : public seng::Application {
-public:
-  App() {}
-
-  ~App() {}
-};
-
 int main() {
 
-  App *app = new App();
+  seng::log log;
+  seng::window window(640, 360, "s.eng");
 
-  app->Run();
+  while (!window.shouldClose()) {
+    window.eventUpdate();
+
+    window.drawUpdate();
+  }
   return 0;
 }
