@@ -23,6 +23,12 @@ seng::window::window(int width, int height, const char *title) {
   }
 
   glfwMakeContextCurrent(m_window_handler);
+
+  if (!gladLoadGL(glfwGetProcAddress)) {
+    seng::log::error("Failed to load OpenGL");
+  } else {
+    seng::log::info("Glad initialized");
+  }
 }
 
 seng::window::~window() {

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../../../vendor/glad/include/glad/gl.h"
+
 struct GLFWwindow;
 
 namespace seng {
