@@ -7,6 +7,8 @@ int main() {
   while (!window.shouldClose()) {
     window.eventUpdate();
 
+    seng::renderer::clear(seng::vec4<double>(1.0, 1.0, 0.0, 1.0));
+
     window.drawUpdate();
   }
   return 0;

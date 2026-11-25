@@ -29,6 +29,9 @@ seng::window::window(int width, int height, const char *title) {
   } else {
     seng::log::info("Glad initialized");
   }
+
+  glViewport(0, 0, width, height);
+  glfwSetFramebufferSizeCallback(m_window_handler, m_framebuffer_size_callback);
 }
 
 seng::window::~window() {
@@ -48,3 +51,8 @@ void seng::window::eventUpdate() const { glfwPollEvents(); }
 const char *seng::window::getTitle() const { return m_title; }
 int seng::window::getWidth() const { return m_width; }
 int seng::window::getHeight() const { return m_height; }
+
+void seng::window::m_framebuffer_size_callback(GLFWwindow *window, int width,
+                                               int height) {
+  glViewport(0, 0, width, height);
+}

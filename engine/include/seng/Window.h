@@ -16,6 +16,11 @@ private:
   const char *m_title;                    ///< Window title (not owned).
   int m_width, m_height;                  ///< Window size in screen units.
   GLFWwindow *m_window_handler = nullptr; ///< Underlying GLFW handle (owned).
+                                          ///
+  /// @brief Callback function for glfw for resizing the window. Everytime a
+  /// resize event update, this function is called.
+  static void m_framebuffer_size_callback(GLFWwindow *window, int width,
+                                          int height);
 
 public:
   /// @brief Creates a window.
@@ -63,5 +68,4 @@ public:
   /// glfwPollEvents();
   void eventUpdate() const;
 };
-
 } // namespace seng
