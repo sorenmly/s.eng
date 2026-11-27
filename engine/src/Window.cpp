@@ -1,5 +1,7 @@
-#include "../include/seng/Window.h"
+#include "../../../vendor/glad/include/glad/gl.h"
+
 #include "../include/seng/Logging.h"
+#include "../include/seng/Window.h"
 #include <GLFW/glfw3.h>
 
 static int glfw_count_init = 0;

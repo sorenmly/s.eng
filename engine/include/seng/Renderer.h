@@ -1,6 +1,5 @@
 #pragma once
 
-#include "../../../vendor/glad/include/glad/gl.h"
 #include "Util.h"
 
 namespace seng {
