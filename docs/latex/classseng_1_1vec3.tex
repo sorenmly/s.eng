@@ -1,0 +1,190 @@
+\doxysection{seng\+::vec3\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classseng_1_1vec3}{}\label{classseng_1_1vec3}\index{seng::vec3$<$ T $>$@{seng::vec3$<$ T $>$}}
+
+
+Represents a three-\/dimensional mathematical vector.  
+
+
+
+
+{\ttfamily \#include $<$Util.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classseng_1_1vec3_a6b2c2be849dd227d912cc73fc55a5d05}{vec3}} (T \mbox{\hyperlink{classseng_1_1vec3_a4b64bed0bb980f4efb40975c7eca6fdc}{x}}, T \mbox{\hyperlink{classseng_1_1vec3_a3a6d56aa712b464a1e5d93258c65aaa2}{y}}, T \mbox{\hyperlink{classseng_1_1vec3_aad6b1c6fa6d04c92b4e3c7b0c583dc38}{z}})
+\begin{DoxyCompactList}\small\item\em Constructs a three-\/dimensional vector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classseng_1_1vec3}{vec3}}$<$ T $>$ \mbox{\hyperlink{classseng_1_1vec3_ada7220218607bfb632b4914d49778d12}{operator+}} (const \mbox{\hyperlink{classseng_1_1vec3}{vec3}} \&other) const
+\begin{DoxyCompactList}\small\item\em Adds two vectors component-\/wise. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classseng_1_1vec3}{vec3}}$<$ T $>$ \mbox{\hyperlink{classseng_1_1vec3_aea90f060f3b9596c3b852d339471a89c}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{classseng_1_1vec3}{vec3}}$<$ T $>$ \&other) const
+\begin{DoxyCompactList}\small\item\em Multiplies two vectors component-\/wise. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classseng_1_1vec3_a4d99dea3253a390c4a7f4977414f9247}{length}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the vector\textquotesingle{}s Euclidean length. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classseng_1_1vec3}{vec3}}$<$ T $>$ \mbox{\hyperlink{classseng_1_1vec3_a85405edc02996ac9d97fffaeefdb5595}{normalize}} ()
+\begin{DoxyCompactList}\small\item\em Normalizes the vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classseng_1_1vec3_aa4c7fef7c932067c9a71dbbd1499d779}{operator==}} (const \mbox{\hyperlink{classseng_1_1vec3}{vec3}}$<$ T $>$ \&v) const
+\begin{DoxyCompactList}\small\item\em Compares two vectors for equality. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classseng_1_1vec3_a4b64bed0bb980f4efb40975c7eca6fdc}\label{classseng_1_1vec3_a4b64bed0bb980f4efb40975c7eca6fdc} 
+T {\bfseries x}
+\begin{DoxyCompactList}\small\item\em Vector component "{}x"{}. \end{DoxyCompactList}\item 
+\Hypertarget{classseng_1_1vec3_a3a6d56aa712b464a1e5d93258c65aaa2}\label{classseng_1_1vec3_a3a6d56aa712b464a1e5d93258c65aaa2} 
+T {\bfseries y}
+\begin{DoxyCompactList}\small\item\em Vector component "{}y"{}. \end{DoxyCompactList}\item 
+\Hypertarget{classseng_1_1vec3_aad6b1c6fa6d04c92b4e3c7b0c583dc38}\label{classseng_1_1vec3_aad6b1c6fa6d04c92b4e3c7b0c583dc38} 
+T {\bfseries z}
+\begin{DoxyCompactList}\small\item\em Vector component "{}z"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class seng\+::vec3$<$ T $>$}
+Represents a three-\/dimensional mathematical vector. 
+
+A templated vector class that stores three components, x, y, and z. Provides basic vector arithmetic, length calculation, normalization, equality comparison, and stream output.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Numeric type used for the vector components.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyParagraph}{Example}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{seng::vec3<float>\ position(1.0f,\ 2.0f,\ 3.0f);}
+\DoxyCodeLine{seng::vec3<float>\ offset(2.0f,\ 0.0f,\ 1.0f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{auto}\ result\ =\ position\ +\ offset;}
+\DoxyCodeLine{std::cout\ <<\ result\ <<\ std::endl;}
+
+\end{DoxyCode}
+ 
+\end{DoxyParagraph}
+
+
+\label{doc-constructors}
+\Hypertarget{classseng_1_1vec3_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classseng_1_1vec3_a6b2c2be849dd227d912cc73fc55a5d05}\index{seng::vec3$<$ T $>$@{seng::vec3$<$ T $>$}!vec3@{vec3}}
+\index{vec3@{vec3}!seng::vec3$<$ T $>$@{seng::vec3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vec3()}{vec3()}}
+{\footnotesize\ttfamily \label{classseng_1_1vec3_a6b2c2be849dd227d912cc73fc55a5d05} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{classseng_1_1vec3}{seng\+::vec3}}$<$ T $>$\+::vec3 (\begin{DoxyParamCaption}\item[{T}]{x}{, }\item[{T}]{y}{, }\item[{T}]{z}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a three-\/dimensional vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Initial X component. \\
+\hline
+{\em y} & Initial Y component. \\
+\hline
+{\em z} & Initial Z component. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classseng_1_1vec3_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classseng_1_1vec3_a4d99dea3253a390c4a7f4977414f9247}\index{seng::vec3$<$ T $>$@{seng::vec3$<$ T $>$}!length@{length}}
+\index{length@{length}!seng::vec3$<$ T $>$@{seng::vec3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily \label{classseng_1_1vec3_a4d99dea3253a390c4a7f4977414f9247} 
+template$<$typename T$>$ \\
+T \mbox{\hyperlink{classseng_1_1vec3}{seng\+::vec3}}$<$ T $>$\+::length (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the vector\textquotesingle{}s Euclidean length. 
+
+\begin{DoxyReturn}{Returns}
+The magnitude of the vector. 
+\end{DoxyReturn}
+\Hypertarget{classseng_1_1vec3_a85405edc02996ac9d97fffaeefdb5595}\index{seng::vec3$<$ T $>$@{seng::vec3$<$ T $>$}!normalize@{normalize}}
+\index{normalize@{normalize}!seng::vec3$<$ T $>$@{seng::vec3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily \label{classseng_1_1vec3_a85405edc02996ac9d97fffaeefdb5595} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{classseng_1_1vec3}{vec3}}$<$ T $>$ \mbox{\hyperlink{classseng_1_1vec3}{seng\+::vec3}}$<$ T $>$\+::normalize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Normalizes the vector. 
+
+Produces a vector with the same direction and unit length.
+
+\begin{DoxyReturn}{Returns}
+The normalized vector. 
+\end{DoxyReturn}
+\Hypertarget{classseng_1_1vec3_aea90f060f3b9596c3b852d339471a89c}\index{seng::vec3$<$ T $>$@{seng::vec3$<$ T $>$}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!seng::vec3$<$ T $>$@{seng::vec3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \label{classseng_1_1vec3_aea90f060f3b9596c3b852d339471a89c} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{classseng_1_1vec3}{vec3}}$<$ T $>$ \mbox{\hyperlink{classseng_1_1vec3}{seng\+::vec3}}$<$ T $>$\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classseng_1_1vec3}{vec3}}$<$ T $>$ \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Multiplies two vectors component-\/wise. 
+
+This operation performs component-\/wise multiplication rather than a dot product.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Vector whose components will be multiplied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new vector containing the component-\/wise product. 
+\end{DoxyReturn}
+\Hypertarget{classseng_1_1vec3_ada7220218607bfb632b4914d49778d12}\index{seng::vec3$<$ T $>$@{seng::vec3$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!seng::vec3$<$ T $>$@{seng::vec3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{classseng_1_1vec3_ada7220218607bfb632b4914d49778d12} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{classseng_1_1vec3}{vec3}}$<$ T $>$ \mbox{\hyperlink{classseng_1_1vec3}{seng\+::vec3}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classseng_1_1vec3}{vec3}}$<$ T $>$ \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds two vectors component-\/wise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Vector to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new vector containing the sum of both vectors. 
+\end{DoxyReturn}
+\Hypertarget{classseng_1_1vec3_aa4c7fef7c932067c9a71dbbd1499d779}\index{seng::vec3$<$ T $>$@{seng::vec3$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!seng::vec3$<$ T $>$@{seng::vec3$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{classseng_1_1vec3_aa4c7fef7c932067c9a71dbbd1499d779} 
+template$<$typename T$>$ \\
+bool \mbox{\hyperlink{classseng_1_1vec3}{seng\+::vec3}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classseng_1_1vec3}{vec3}}$<$ T $>$ \&}]{v}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two vectors for equality. 
+
+Compares all three components using their equality operators.
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Vector to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all components are equal, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/seng/Util.\+h\end{DoxyCompactItemize}

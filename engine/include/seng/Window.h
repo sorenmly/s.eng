@@ -6,11 +6,14 @@ struct GLFWwindow;
 
 namespace seng {
 
+/// @class window
 /// @brief Represents an application window.
 ///
 /// Owns the underlying GLFW window handle and destroys it when the object
 /// goes out of scope (RAII). Because it owns a unique resource, the class
 /// cannot be copied.
+///
+/// @example example_window.cpp
 class window {
 private:
   const char *m_title;                    ///< Window title (not owned).

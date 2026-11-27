@@ -1,0 +1,98 @@
+\doxysection{seng\+::log Class Reference}
+\hypertarget{classseng_1_1log}{}\label{classseng_1_1log}\index{seng::log@{seng::log}}
+
+
+Used for logging things in terminal. It has three levels defined byt the enum Log\+Level.  
+
+
+
+
+{\ttfamily \#include $<$Logging.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classseng_1_1log_af9c123e59d3514f74071f2afce292acd}{message}} (Log\+Level level, std\+::string\+\_\+view text)
+\begin{DoxyCompactList}\small\item\em Sends a log in the terminal with level defined. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classseng_1_1log_ae58b498f15b39ddec263ed6e986704c6}{info}} (std\+::string\+\_\+view text)
+\begin{DoxyCompactList}\small\item\em Sends an Info level log with text message. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classseng_1_1log_a07379d47ab5a99d35d16d2a3b82a979f}{warn}} (std\+::string\+\_\+view text)
+\begin{DoxyCompactList}\small\item\em Sends an Warn level log with text message. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classseng_1_1log_a4d757985979e272b5cd91aad2319df81}{error}} (std\+::string\+\_\+view text)
+\begin{DoxyCompactList}\small\item\em Sends an Error level log with text message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Used for logging things in terminal. It has three levels defined byt the enum Log\+Level. 
+
+\label{doc-func-members}
+\Hypertarget{classseng_1_1log_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classseng_1_1log_a4d757985979e272b5cd91aad2319df81}\index{seng::log@{seng::log}!error@{error}}
+\index{error@{error}!seng::log@{seng::log}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily \label{classseng_1_1log_a4d757985979e272b5cd91aad2319df81} 
+void seng\+::log\+::error (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sends an Error level log with text message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The text of the log as string\+\_\+view. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classseng_1_1log_ae58b498f15b39ddec263ed6e986704c6}\index{seng::log@{seng::log}!info@{info}}
+\index{info@{info}!seng::log@{seng::log}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily \label{classseng_1_1log_ae58b498f15b39ddec263ed6e986704c6} 
+void seng\+::log\+::info (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sends an Info level log with text message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The text of the log as string\+\_\+view. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classseng_1_1log_af9c123e59d3514f74071f2afce292acd}\index{seng::log@{seng::log}!message@{message}}
+\index{message@{message}!seng::log@{seng::log}}
+\doxysubsubsection{\texorpdfstring{message()}{message()}}
+{\footnotesize\ttfamily \label{classseng_1_1log_af9c123e59d3514f74071f2afce292acd} 
+void seng\+::log\+::message (\begin{DoxyParamCaption}\item[{Log\+Level}]{level}{, }\item[{std\+::string\+\_\+view}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sends a log in the terminal with level defined. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The level of the log (Info, Warn or Error). Must be passed through enum class Log\+Level. \\
+\hline
+{\em text} & The text of the log as string\+\_\+view. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classseng_1_1log_a07379d47ab5a99d35d16d2a3b82a979f}\index{seng::log@{seng::log}!warn@{warn}}
+\index{warn@{warn}!seng::log@{seng::log}}
+\doxysubsubsection{\texorpdfstring{warn()}{warn()}}
+{\footnotesize\ttfamily \label{classseng_1_1log_a07379d47ab5a99d35d16d2a3b82a979f} 
+void seng\+::log\+::warn (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Sends an Warn level log with text message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The text of the log as string\+\_\+view. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/seng/Logging.\+h\item 
+engine/src/Logging.\+cpp\end{DoxyCompactItemize}

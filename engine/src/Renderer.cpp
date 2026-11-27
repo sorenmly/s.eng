@@ -6,3 +6,8 @@ void seng::renderer::clear(seng::vec4<double> color) {
   glClearColor(color.x, color.y, color.z, color.a);
   glClear(GL_COLOR_BUFFER_BIT);
 }
+
+void seng::renderer::clear(seng::vec4<float> color) {
+  glClearColor(color.x, color.y, color.z, color.a);
+  glClear(GL_COLOR_BUFFER_BIT);
+}

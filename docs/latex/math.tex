@@ -1,0 +1,31 @@
+\chapter{Math Library }
+\hypertarget{math}{}\label{math}\index{Math Library@{Math Library}}
+Mathematical utilities provided by s.\+eng.\hypertarget{math_introduction}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{math_introduction}
+The math module provides fundamental mathematical structures and operations used throughout the engine.\hypertarget{math_vectors}{}\doxysection{\texorpdfstring{Vectors}{Vectors}}\label{math_vectors}
+The library currently provides three vector types\+:
+
+
+\begin{DoxyItemize}
+\item \doxylink{classseng_1_1vec2}{seng\+::vec2}
+\item \doxylink{classseng_1_1vec3}{seng\+::vec3}
+\item \doxylink{classseng_1_1vec4}{seng\+::vec4}
+\end{DoxyItemize}\hypertarget{math_operations}{}\doxysection{\texorpdfstring{Supported Operations}{Supported Operations}}\label{math_operations}
+All vector types support\+:
+
+
+\begin{DoxyItemize}
+\item Component-\/wise addition.
+\item Component-\/wise multiplication.
+\item Euclidean length calculation.
+\item Vector normalization.
+\item Equality comparison.
+\end{DoxyItemize}\hypertarget{math_examples}{}\doxysection{\texorpdfstring{Examples}{Examples}}\label{math_examples}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classseng_1_1vec3}{seng::vec3<float>}}\ position(1.0f,\ 2.0f,\ 3.0f);}
+\DoxyCodeLine{\mbox{\hyperlink{classseng_1_1vec3}{seng::vec3<float>}}\ offset(5.0f,\ 0.0f,\ 0.0f);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{auto}\ result\ =\ position\ +\ offset;}
+
+\end{DoxyCode}
+ 

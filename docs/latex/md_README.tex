@@ -1,0 +1,20 @@
+\chapter{s.\+eng }
+\hypertarget{md_README}{}\label{md_README}\index{s.eng@{s.eng}}
+\label{md_README_autotoc_md0}%
+\Hypertarget{md_README_autotoc_md0}%
+
+
+Simple engine written in C++ with GLFW \& Open\+GL\hypertarget{md_README_autotoc_md1}{}\doxysection{\texorpdfstring{Dev \& Build}{Dev \& Build}}\label{md_README_autotoc_md1}
+{\bfseries{Dependencies}}\+:
+\begin{DoxyItemize}
+\item GLFW 3
+\item Open\+GL (It comes with your PC!)
+\item {\itshape glad (It is technically a dependency, but you don\textquotesingle{}t need to install since it comes in the vendor/ directory}
+\end{DoxyItemize}
+
+{\bfseries{Build}} With all the dependencies set up, run 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/S\ .\ -\/B\ build}
+
+\end{DoxyCode}
+ in the root directory. This will generate the {\ttfamily libengine.\+so} ({\ttfamily build/engine/}) and the {\ttfamily example} ({\ttfamily build/example}). 

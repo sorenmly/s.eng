@@ -1,0 +1,41 @@
+/**
+ * @page gettingstarted Getting Started
+ *
+ * @brief Basics of the engine and syntax with examples.
+ *
+ * @section creatingwindow Creating a window
+ *
+ * To create a window with s.eng lib, you'll need to instantiate an object of the class seng::window.
+ * Basically, this class contains all of the code to create a window and managing it.
+ *
+ * Its constructor has some parameters. You need to define width, height and the name of the window (title)
+ * 
+ * See this basic window object:
+ * @code
+ * seng::window my_window(640, 360, "framebyframehihi");
+ * @endcode
+ *
+ * This line of code creates the window object with width of 640, height of 360 and its title as 'framebyframehihi'.
+ *
+ * The next step is the Game Loop. Your window needs to stay open and listen to when it needs to close (you clicked the close button in your OS).
+ * The seng::window class provides a glfw wrapper function for this, seng::window::shouldClose()
+ *
+ * Other important thing is to update the events. Every "action" is an event and it needs to be updated everytime.
+ *
+ * @code
+ * while (!window.shouldClose()) {
+    window.eventUpdate();
+
+    seng::renderer::clear(seng::vec4<double>(1.0, 1.0, 0.0, 1.0));
+
+    window.drawUpdate();
+  }
+ * @endcode
+ *
+ * seng::window::eventUpdate() updates the events. Note that we put other function: seng::renderer::clear. Basically, this function "paints" (or clears)
+ * the entire window with the color in the first parameter.
+ *
+ * Entire example:
+ * @ref example_window.cpp
+ * 
+  */

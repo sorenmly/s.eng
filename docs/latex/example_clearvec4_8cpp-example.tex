@@ -1,0 +1,25 @@
+\doxysection{example\+\_\+clearvec4.\+cpp}
+\hypertarget{example_clearvec4_8cpp-example}{}\label{example_clearvec4_8cpp-example}
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ <seng.h>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main()\ \{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Creating\ window\ instance}}
+\DoxyCodeLine{\ \ \mbox{\hyperlink{classseng_1_1window}{seng::window}}\ window(1080,\ 720,\ \textcolor{stringliteral}{"{}title"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{comment}{//\ Game\ loop}}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{while}\ (!window.\mbox{\hyperlink{classseng_1_1window_a567d103dbbdb4405b51f20e47608f0fd}{shouldClose}}())\ \{}
+\DoxyCodeLine{\ \ \ \ window.\mbox{\hyperlink{classseng_1_1window_a2d8bdf85518020abc1fa9135c940ca17}{eventUpdate}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ \ *\ Here,\ the\ color\ R\ =\ 1.0,\ G\ =\ 1.0,\ B\ =\ 0.0\ and\ A\ =\ 1.0\ is\ a\ yellow,}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ \ *\ where\ X\ is\ red,\ Y\ is\ green,\ Z\ is\ blue\ and\ A\ is\ Alpha}}
+\DoxyCodeLine{\textcolor{comment}{\ \ \ \ \ */}}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classseng_1_1renderer_a83645272c72b9608044f37aef07bd8e3}{seng::renderer::clear}}(\mbox{\hyperlink{classseng_1_1vec4}{seng::vec4<double>}}(1.0,\ 1.0,\ 0.0,\ 1.0));}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ window.\mbox{\hyperlink{classseng_1_1window_a59406dac592bab14a3c2cf608618a77c}{drawUpdate}}();}
+\DoxyCodeLine{\ \ \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 

@@ -1,0 +1,137 @@
+\doxysection{seng\+::window Class Reference}
+\hypertarget{classseng_1_1window}{}\label{classseng_1_1window}\index{seng::window@{seng::window}}
+
+
+Represents an application window.  
+
+
+
+
+{\ttfamily \#include $<$Window.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classseng_1_1window_a43a240bbdce1492e7117eccefc482bad}{window}} (int width, int height, const char \texorpdfstring{$\ast$}{*}title)
+\begin{DoxyCompactList}\small\item\em Creates a window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classseng_1_1window_a1d8060fe3269f63399a394779843ea88}{window}} (const \mbox{\hyperlink{classseng_1_1window}{window}} \&other)=delete
+\begin{DoxyCompactList}\small\item\em Copying is disabled. \end{DoxyCompactList}\item 
+\Hypertarget{classseng_1_1window_ac9facb62e77bc596a22cc593db5c7653}\label{classseng_1_1window_ac9facb62e77bc596a22cc593db5c7653} 
+\mbox{\hyperlink{classseng_1_1window}{window}} \& {\bfseries operator=} (const \mbox{\hyperlink{classseng_1_1window}{window}} \&other)=delete
+\begin{DoxyCompactList}\small\item\em Copy assignment is disabled for the same reason as above. \end{DoxyCompactList}\item 
+\Hypertarget{classseng_1_1window_a46f316eeda5bd027bbfc9a77d647556d}\label{classseng_1_1window_a46f316eeda5bd027bbfc9a77d647556d} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}window} ()
+\begin{DoxyCompactList}\small\item\em Destroys the window and releases the GLFW handle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classseng_1_1window_a567d103dbbdb4405b51f20e47608f0fd}{should\+Close}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the window should close. If not, maintains the window. \end{DoxyCompactList}\item 
+\Hypertarget{classseng_1_1window_a3f42e4309a2fbd425147cf073b007878}\label{classseng_1_1window_a3f42e4309a2fbd425147cf073b007878} 
+int {\bfseries get\+Width} () const
+\begin{DoxyCompactList}\small\item\em Returns the window width. \end{DoxyCompactList}\item 
+\Hypertarget{classseng_1_1window_a89000bb4abdf568e369c666ffdee8f98}\label{classseng_1_1window_a89000bb4abdf568e369c666ffdee8f98} 
+int {\bfseries get\+Height} () const
+\begin{DoxyCompactList}\small\item\em Returns the window height. \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classseng_1_1window_af70e51acd4a8eab8b63f28903a446ba4}{get\+Title}} () const
+\begin{DoxyCompactList}\small\item\em Returns the window title. \end{DoxyCompactList}\item 
+GLFWwindow \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classseng_1_1window_af9f5550569e7bf4abef0d2c6d532f938}{get\+Window\+Handler}} () const
+\begin{DoxyCompactList}\small\item\em Returns the window handler (window pointer itself) \end{DoxyCompactList}\item 
+\Hypertarget{classseng_1_1window_a59406dac592bab14a3c2cf608618a77c}\label{classseng_1_1window_a59406dac592bab14a3c2cf608618a77c} 
+void {\bfseries draw\+Update} () const
+\begin{DoxyCompactList}\small\item\em Updates the drawing process. Wrapper to glfw\+Swap\+Buffers(). \end{DoxyCompactList}\item 
+\Hypertarget{classseng_1_1window_a2d8bdf85518020abc1fa9135c940ca17}\label{classseng_1_1window_a2d8bdf85518020abc1fa9135c940ca17} 
+void {\bfseries event\+Update} () const
+\begin{DoxyCompactList}\small\item\em Updates the events in the engine, like input. Wrapper to glfw\+Poll\+Events();. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an application window. 
+
+Owns the underlying GLFW window handle and destroys it when the object goes out of scope (RAII). Because it owns a unique resource, the class cannot be copied. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{example_clearvec4_8cpp-example}{example\+\_\+clearvec4.\+cpp}}, and \mbox{\hyperlink{example_window_8cpp-example}{example\+\_\+window.\+cpp}}.\end{Desc}
+
+
+\label{doc-constructors}
+\Hypertarget{classseng_1_1window_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classseng_1_1window_a43a240bbdce1492e7117eccefc482bad}\index{seng::window@{seng::window}!window@{window}}
+\index{window@{window}!seng::window@{seng::window}}
+\doxysubsubsection{\texorpdfstring{window()}{window()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classseng_1_1window_a43a240bbdce1492e7117eccefc482bad} 
+seng\+::window\+::window (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{}\end{DoxyParamCaption})}
+
+
+
+Creates a window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the window. \\
+\hline
+{\em height} & Height of the window. \\
+\hline
+{\em title} & Title shown in the title bar. The pointer is stored, not copied, so it must outlive the window. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classseng_1_1window_a1d8060fe3269f63399a394779843ea88}\index{seng::window@{seng::window}!window@{window}}
+\index{window@{window}!seng::window@{seng::window}}
+\doxysubsubsection{\texorpdfstring{window()}{window()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classseng_1_1window_a1d8060fe3269f63399a394779843ea88} 
+seng\+::window\+::window (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classseng_1_1window}{window}} \&}]{other}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Copying is disabled. 
+
+The window owns a GLFW handle that must be destroyed exactly once. A copy would lead to a double free. 
+
+\label{doc-func-members}
+\Hypertarget{classseng_1_1window_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classseng_1_1window_af70e51acd4a8eab8b63f28903a446ba4}\index{seng::window@{seng::window}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!seng::window@{seng::window}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily \label{classseng_1_1window_af70e51acd4a8eab8b63f28903a446ba4} 
+const char \texorpdfstring{$\ast$}{*} seng\+::window\+::get\+Title (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the window title. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the title string. Do not free it. 
+\end{DoxyReturn}
+\Hypertarget{classseng_1_1window_af9f5550569e7bf4abef0d2c6d532f938}\index{seng::window@{seng::window}!getWindowHandler@{getWindowHandler}}
+\index{getWindowHandler@{getWindowHandler}!seng::window@{seng::window}}
+\doxysubsubsection{\texorpdfstring{getWindowHandler()}{getWindowHandler()}}
+{\footnotesize\ttfamily \label{classseng_1_1window_af9f5550569e7bf4abef0d2c6d532f938} 
+GLFWwindow \texorpdfstring{$\ast$}{*} seng\+::window\+::get\+Window\+Handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Returns the window handler (window pointer itself) 
+
+\begin{DoxyReturn}{Returns}
+The handler of the window in which is a pointer to a GLFWwindow type. 
+\end{DoxyReturn}
+\Hypertarget{classseng_1_1window_a567d103dbbdb4405b51f20e47608f0fd}\index{seng::window@{seng::window}!shouldClose@{shouldClose}}
+\index{shouldClose@{shouldClose}!seng::window@{seng::window}}
+\doxysubsubsection{\texorpdfstring{shouldClose()}{shouldClose()}}
+{\footnotesize\ttfamily \label{classseng_1_1window_a567d103dbbdb4405b51f20e47608f0fd} 
+int seng\+::window\+::should\+Close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the window should close. If not, maintains the window. 
+
+\begin{DoxyReturn}{Returns}
+An int\+: 1 if it shouldn\textquotesingle{}t close and 0 otherwise. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{example_clearvec4_8cpp-example}{example\+\_\+clearvec4.\+cpp}}, and \mbox{\hyperlink{example_window_8cpp-example}{example\+\_\+window.\+cpp}}.\end{Desc}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+engine/include/seng/Window.\+h\item 
+engine/src/Window.\+cpp\end{DoxyCompactItemize}

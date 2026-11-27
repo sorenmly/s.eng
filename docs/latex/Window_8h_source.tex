@@ -1,0 +1,46 @@
+\doxysection{Window.\+h}
+\hypertarget{Window_8h_source}{}\label{Window_8h_source}\index{engine/include/seng/Window.h@{engine/include/seng/Window.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}../../../vendor/glad/include/glad/gl.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{struct\ }GLFWwindow;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }seng\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classseng_1_1window_a43a240bbdce1492e7117eccefc482bad}{window}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *m\_title;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \textcolor{keywordtype}{int}\ m\_width,\ m\_height;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ GLFWwindow\ *m\_window\_handler\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ m\_framebuffer\_size\_callback(GLFWwindow\ *\mbox{\hyperlink{classseng_1_1window_a43a240bbdce1492e7117eccefc482bad}{window}},\ \textcolor{keywordtype}{int}\ width,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{classseng_1_1window_a43a240bbdce1492e7117eccefc482bad}{window}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *title);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \mbox{\hyperlink{classseng_1_1window_a1d8060fe3269f63399a394779843ea88}{window}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classseng_1_1window_a43a240bbdce1492e7117eccefc482bad}{window}}\ \&other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \mbox{\hyperlink{classseng_1_1window_a43a240bbdce1492e7117eccefc482bad}{window}}\ \&\mbox{\hyperlink{classseng_1_1window_ac9facb62e77bc596a22cc593db5c7653}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classseng_1_1window_a43a240bbdce1492e7117eccefc482bad}{window}}\ \&other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{classseng_1_1window_a46f316eeda5bd027bbfc9a77d647556d}{\string~window}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classseng_1_1window_a567d103dbbdb4405b51f20e47608f0fd}{shouldClose}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classseng_1_1window_a3f42e4309a2fbd425147cf073b007878}{getWidth}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classseng_1_1window_a89000bb4abdf568e369c666ffdee8f98}{getHeight}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00060\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{classseng_1_1window_af70e51acd4a8eab8b63f28903a446ba4}{getTitle}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ GLFWwindow\ *\mbox{\hyperlink{classseng_1_1window_af9f5550569e7bf4abef0d2c6d532f938}{getWindowHandler}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classseng_1_1window_a59406dac592bab14a3c2cf608618a77c}{drawUpdate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00072\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classseng_1_1window_a2d8bdf85518020abc1fa9135c940ca17}{eventUpdate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \};}
+\DoxyCodeLine{00074\ \}\ \textcolor{comment}{//\ namespace\ seng}}
+
+\end{DoxyCode}
